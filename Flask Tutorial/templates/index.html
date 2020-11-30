@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home page</title>
+</head>
+<body>
+	<h1>
+		Flask Tutorial
+	</h1>
+
+	{% if number<10 %}
+		<p> {{number}} is greater than 10 </p>
+	{%else %}
+		<p> {{number}} is smaller than 10</p>
+	{%endif%}
+
+	{% for f in my_friends %}  <!-- Ginger template use this way to write python code in html -->
+		<h2>{{f}}</h2>
+	{% endfor %}               <!-- Here we need to end for loop also in ginger -->
+
+	<!-- Take input from user -->
+	<!-- <form method ="POST" action="/submit" >
+		<input type="text" name="username" placeholder="Enter your name">
+		<input type ="submit">
+
+	</form> -->
+
+	<!-- how to take file as input -->
+	<form method ="POST" action="/submit" enctype="multipart/form-data">
+		<input type="text" name="username" placeholder="Enter your name">
+		
+
+		<input type="file" name="userfile">
+		 
+		<input type ="submit">
+
+	</form>
+
+
+</body>
+</html>
